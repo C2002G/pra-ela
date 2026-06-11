@@ -1,0 +1,202 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  /* Paleta de cores: Vermelho Vinho + Ouro Rose */
+  --primary: #722F37; /* Vermelho Vinho */
+  --primary-foreground: #F8F7F5; /* Off-White */
+  --sidebar-primary: #6B2E35;
+  --sidebar-primary-foreground: #F8F7F5;
+  --chart-1: #C9A961; /* Ouro Rose */
+  --chart-2: #722F37;
+  --chart-3: #8B3A42;
+  --chart-4: #6B2E35;
+  --chart-5: #5A2530;
+  --radius: 0.65rem;
+  --background: #F8F7F5; /* Off-White */
+  --foreground: #3D3D3D; /* Cinza Escuro */
+  --card: #FFFFFF;
+  --card-foreground: #3D3D3D;
+  --popover: #FFFFFF;
+  --popover-foreground: #3D3D3D;
+  --secondary: #E8E3DB; /* Bege Claro */
+  --secondary-foreground: #3D3D3D;
+  --muted: #D4CCBF; /* Bege Médio */
+  --muted-foreground: #6B6B6B;
+  --accent: #C9A961; /* Ouro Rose */
+  --accent-foreground: #FFFFFF;
+  --destructive: #722F37; /* Vermelho Vinho para destrutivo */
+  --destructive-foreground: #FFFFFF;
+  --border: #E8E3DB;
+  --input: #FFFFFF;
+  --ring: #C9A961;
+  --sidebar: #F8F7F5;
+  --sidebar-foreground: #3D3D3D;
+  --sidebar-accent: #C9A961;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: #E8E3DB;
+  --sidebar-ring: #C9A961;
+}
+
+.dark {
+  /* Modo escuro não será usado neste projeto */
+  --primary: #722F37;
+  --primary-foreground: #F8F7F5;
+  --sidebar-primary: #6B2E35;
+  --sidebar-primary-foreground: #F8F7F5;
+  --background: #1A1A1A;
+  --foreground: #F8F7F5;
+  --card: #2D2D2D;
+  --card-foreground: #F8F7F5;
+  --popover: #2D2D2D;
+  --popover-foreground: #F8F7F5;
+  --secondary: #3D3D3D;
+  --secondary-foreground: #F8F7F5;
+  --muted: #4D4D4D;
+  --muted-foreground: #D4CCBF;
+  --accent: #C9A961;
+  --accent-foreground: #1A1A1A;
+  --destructive: #722F37;
+  --destructive-foreground: #F8F7F5;
+  --border: #3D3D3D;
+  --input: #2D2D2D;
+  --ring: #C9A961;
+  --chart-1: #C9A961;
+  --chart-2: #722F37;
+  --chart-3: #8B3A42;
+  --chart-4: #6B2E35;
+  --chart-5: #5A2530;
+  --sidebar: #2D2D2D;
+  --sidebar-foreground: #F8F7F5;
+  --sidebar-accent: #C9A961;
+  --sidebar-accent-foreground: #1A1A1A;
+  --sidebar-border: #3D3D3D;
+  --sidebar-ring: #C9A961;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  /**
+   * Custom container utility that centers content and adds responsive padding.
+   */
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: 1280px;
+    }
+  }
+
+  /* Tipografia customizada para o design romântico */
+  body {
+    font-family: 'Lato', sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+  }
+
+  button, [role="button"], label {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* Linha divisória elegante em ouro rose */
+  .divider-gold {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #C9A961, transparent);
+    margin: 2rem 0;
+  }
+
+  /* Card com sombra suave (depth) */
+  .card-luxury {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(114, 47, 55, 0.08);
+    transition: box-shadow 0.3s ease-out;
+  }
+
+  .card-luxury:hover {
+    box-shadow: 0 8px 32px rgba(114, 47, 55, 0.12);
+  }
+}
