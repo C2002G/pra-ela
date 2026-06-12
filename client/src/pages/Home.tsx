@@ -22,12 +22,14 @@ import '../styles/Home.css';
 // ============================================================================
 
 // EDITAR: Data de início do relacionamento (para o contador de tempo)
-const RELATIONSHIP_START_DATE = new Date('2023-02-15'); // EDITAR: Mude para a data que vocês começaram
+const RELATIONSHIP_START_DATE = new Date('2022-01-03'); // EDITAR: Mude para a data que vocês começaram
 
 // EDITAR: URLs das fotos do carrossel (substitua com suas fotos)
 const CAROUSEL_IMAGES = [
-  'https://d2xsxph8kpxj0f.cloudfront.net/310519663748134247/fihQ7MrsgNLsrs3sQCFq57/hero-romantic-couple-gq8Wbu8BeEyBrwxc9UDJwZ.webp',
-  'https://d2xsxph8kpxj0f.cloudfront.net/310519663748134247/fihQ7MrsgNLsrs3sQCFq57/abstract-romance-iF3ZuMH4MJJKjhcVt6p36W.webp',
+  'fotos/foto4.jpeg',
+  'fotos/foto5.jpeg',
+  'fotos/foto12.jpeg',
+  
   // Adicione mais URLs de fotos aqui
 ];
 
@@ -35,26 +37,40 @@ const CAROUSEL_IMAGES = [
 const JOURNEY_PHOTOS = [
   {
     id: 1,
-    photo: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663748134247/fihQ7MrsgNLsrs3sQCFq57/hero-romantic-couple-gq8Wbu8BeEyBrwxc9UDJwZ.webp',
-    title: 'EDITAR: Nosso Primeiro Encontro',
-    date: 'EDITAR: 15 de Fevereiro',
-    description: 'EDITAR: Uma descrição especial sobre este momento...',
+    photo: 'fotos/foto10.jpeg',
+    title: 'LAMBIDA NA CARA',
+    date: '01/01/2022',
+    description: 'Aqui foi a primeira vez que a gente se olhou bebados, esqueço de tudo... Menos desse tcha que tivemos, primeiro de muitos',
   },
   {
     id: 2,
-    photo: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663748134247/fihQ7MrsgNLsrs3sQCFq57/abstract-romance-iF3ZuMH4MJJKjhcVt6p36W.webp',
-    title: 'EDITAR: Nosso Segundo Momento',
-    date: 'EDITAR: 20 de Março',
-    description: 'EDITAR: Outra descrição especial...',
+    photo: 'fotos/foto9.jpeg',
+    title: '1ª ANO',
+    date: '01/01/2023',
+    description: 'Eu ja estava infinitamente feliz que estavamos juntos e se vendo todo dia, mal sabia que um tempo depois iriamos ter nossa casinha',
   },
   {
     id: 3,
-    photo: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663748134247/fihQ7MrsgNLsrs3sQCFq57/hero-romantic-couple-gq8Wbu8BeEyBrwxc9UDJwZ.webp',
-    title: 'EDITAR: Um Terceiro Capítulo',
-    date: 'EDITAR: 10 de Abril',
-    description: 'EDITAR: Mais uma memória especial...',
+    photo: 'fotos/foto7.jpeg',
+    title: '2ª ANO',
+    date: '01/01/2024',
+    description: 'Cada ano novo, cada ritual dessa foto. Sempre melhor que anterior. Não sou religioso mas amo esse ritual, e tu é minha religião OH GLORIA',
   },
-];
+  {
+    id: 4,
+    photo: 'fotos/foto8.jpeg',
+    title: 'KKKKKKKKKKKKKKKKKK essa a gente tava loko',
+    date: '01/01/2025',
+    description: 'O que eu amei essa viagem não ta escrito, obrigado por tudo tudo mesmo. Primeira viagem de muitas, e eu amo que tu me ensinou muita coisa nessa indiada. Te amando mais ainda a cada segundo que passava',
+  },
+  {
+    id: 5,
+    photo: 'fotos/foto11.jpeg',
+    title: 'A carinha de cansado dos dois KKKKK',
+    date: '01/01/2026',
+    description: 'A gente tava derrotado essa hora, mas eu mesmo derrotado cansado, amo fazer esse ritual e viajar contigo meu amor. Aqui me mostrou muito que idependente do lugar e como, ainda vou amar muito por estar contigo',
+  },
+  ];
 
 // EDITAR: Músicas locais (MP3)
 // Instruções:
@@ -62,13 +78,13 @@ const JOURNEY_PHOTOS = [
 // 2. Coloque os arquivos MP3 na pasta: public/musicas/
 // 3. Adicione cada música aqui com: { name: 'Nome da Música', artist: 'Artista', file: 'musicas/arquivo.mp3' }
 const LOCAL_SONGS = [
-  { name: 'Outro Verão', artist: 'EDITAR: Artista', file: 'musicas/outro-verao.mp3' },
-  { name: 'Camisa 10', artist: 'EDITAR: Artista', file: 'musicas/camisa-10.mp3' },
-  { name: 'Estou Mal', artist: 'EDITAR: Artista', file: 'musicas/estou-mal.mp3' },
-  { name: 'Oi, Estou Te Amando', artist: 'EDITAR: Artista', file: 'musicas/oi-estou-te-amando.mp3' },
-  { name: 'Biquíni', artist: 'EDITAR: Artista', file: 'musicas/biquini.mp3' },
-  { name: 'Te Esperando', artist: 'EDITAR: Artista', file: 'musicas/te-esperando.mp3' },
-  { name: 'Sogrão Caprichou', artist: 'EDITAR: Artista', file: 'musicas/sograo-caprichou.mp3' },
+  { name: 'Outro Verão', artist: 'Chimarruts', file: 'musicas/outro-verao.mp3' },
+  { name: 'Camisa 10', artist: 'Turma do pagode', file: 'musicas/camisa-10.mp3' },
+  { name: 'Estou Mal', artist: 'Raça Negra', file: 'musicas/estou-mal.mp3' },
+  { name: 'Oi, Estou Te Amando', artist: 'Raça Negra', file: 'musicas/oi-estou-te-amando.mp3' },
+  { name: 'Biquíni', artist: 'Stome', file: 'musicas/biquini.mp3' },
+  { name: 'Te Esperando', artist: 'Luan Santana', file: 'musicas/te-esperando.mp3' },
+  { name: 'Sogrão Caprichou', artist: 'Luan Santana', file: 'musicas/sograo-caprichou.mp3' },
 ];
 
 // EDITAR: Imagem de capa padrão para o player (quando não há capa do álbum)
@@ -418,7 +434,7 @@ function MusicListCard() {
         <div className="music-list-content">
           <div className="music-list-header">
             <h3 className="music-list-card-title">Para Você, Com Amor</h3>
-            <p className="music-list-subtitle">EDITAR: Nossas Músicas Especiais</p>
+            <p className="music-list-subtitle">Nossas Músicas Especiais</p>
           </div>
 
           {/* Lista de músicas */}
@@ -456,7 +472,10 @@ export default function Home() {
       <section className="hero-section">
         <div className="hero-content">
           <h1 className="hero-title">Para o Meu Amor</h1>
-          <p className="hero-subtitle">EDITAR: Uma mensagem especial para você neste Dia dos Namorados</p>
+          <p className="hero-subtitle">Minha linda, veio por meio do meu artesanto WEB KKKKK</p>
+          <p>Te presentear com um simples gesto, mas que foi feito com muito amor e carinho meu amor</p>
+          <p>Te amo demais minha linda, quero que você use esse site para lembrar de como somos um casal foda</p>
+          <p>Use sem moderação, minha princesa</p>
         </div>
       </section>
 
@@ -489,14 +508,17 @@ export default function Home() {
 
       {/* Mensagem Final */}
       <section className="final-message">
-        <h2>EDITAR: Título da Mensagem Final</h2>
-        <p>EDITAR: Escreva uma mensagem especial para sua namorada aqui. Pode ser uma declaração de amor, um agradecimento ou qualquer coisa que venha do coração.</p>
-        <button className="cta-button">EDITAR: Texto do Botão</button>
+        <h2>Feliz dias dos Namorados</h2>
+        <p>Miha Princesa Linda. Obrigado por todos esse anos juntos. Não tenho como agradecer e explicar o quão grato sou por ter você minha vida.
+        </p>
+        <p>Tu sabe melhor que níguem que a minha vida melhorou 99999999% com a sua presença, eu aprendi muita coisa, desculpe por tu ter me pegado muito na planta, mas juro que vou ser uma baita investimento KKKKKK</p>
+        <p>Minha vida, minha paixão. Desculpe ser esse meu mero presente, mas te juro que foi de coração e eu vou assumir que eu amo fazer isso pra ti (te acostuma que vou fazer mais vezes KKK)</p>
+        <p>Te amo demais minha linda, obrigado por mais um dias dos namorados ao seu lado, sei que vou passar todos meus dias dos namorados contigo, mas sempre cada um vai ser mais especial que o outro.</p>
       </section>
 
       {/* Footer */}
       <footer className="footer">
-        <p>Com amor, no Dia dos Namorados 💕</p>
+        <p>Com amor, teu homem que te am muito. Feliz dias dos namorados minha lindona 💕</p>
       </footer>
     </div>
   );
